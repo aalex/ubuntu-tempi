@@ -1,0 +1,79 @@
+Source: tempi
+Priority: optional
+Section: libs
+Build-Depends:
+ automake,
+ autotools-dev,
+ bison,
+ cdbs,
+ debhelper (>= 7.0.0),
+ dh-buildinfo,
+ doxygen,
+ libboost-all-dev,
+ libclutter-1.0-dev,
+ libglib2.0-dev,
+ liblo-dev,
+ libstk0-dev,
+ libtool,
+ libxml2-dev,
+ pkg-config
+Homepage: http://tempi.toonloop.com
+Standards-Version: 3.8.2
+Maintainer: Alexandre Quessy <alexandre@quessy.net>
+Vcs-Git: git://github.com/aalex/tempi.git
+Vcs-Browser: http://github.com/aalex/tempi
+
+Package: libtempi-0.1-dev
+Section: libdevel
+Architecture: any
+Provides: libtempi-dev
+Conflicts: libtempi-dev
+Suggests: libtempi-0.1-doc
+Depends: 
+ libtempi-0.1-0 (= ${binary:Version}),
+ ${misc:Depends}
+Description: multimodal sampling library
+ Tempi is a C++ library for multi-modal sampling through a
+ strongly-typed dataflow language. It allows recording and playback
+ of flows of messages whose types can be arbitrary.
+ .
+ This package contains headers, documentation and static libraries.
+
+Package: libtempi-0.1-0
+Section: libs
+Architecture: any
+Suggests: libtempi-0.1-dev
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: multimodal sampling library - libs
+ Tempi is a C++ library for multi-modal sampling through a
+ strongly-typed dataflow language. It allows recording and playback
+ of flows of messages whose types can be arbitrary.
+ .
+ This package contains the binary shared library.
+
+Package: libtempi-0.1-doc
+Section: doc
+Architecture: all
+Recommends: libtempi-0.1-dev
+Depends:
+ ${misc:Depends}
+Description: multimodal sampling library - doc
+ Tempi is a C++ library for multi-modal sampling through a
+ strongly-typed dataflow language. It allows recording and playback
+ of flows of messages whose types can be arbitrary.
+ .
+ This package contains the documentation.
+
+Package: tempi-utils
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: multimodal sampling library - utilities
+ Tempi is a C++ library for multi-modal sampling through a
+ strongly-typed dataflow language. It allows recording and playback
+ of flows of messages whose types can be arbitrary.
+ .
+ This package contains some command utilities.

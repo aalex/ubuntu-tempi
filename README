@@ -1,0 +1,63 @@
+::
+
+   _                       _ 
+  | |_ ___ _ __ ___  _ __ (_)
+  | __/ _ \ '_ ` _ \| '_ \| |
+  | ||  __/ | | | | | |_) | |
+   \__\___|_| |_| |_| .__/|_|
+                    |_|
+
+
+About
+-----
+Tempi dataflow programming C++ library aimed at multimodal sampling.
+
+Tempi is a C++ library for multi-modal sampling through a strongly-typed dataflow language. It allows recording and playback of flows of messages whose types can be arbitrary. We can then record series of events encoded as numbers, texts, 3D trajectories, list of images or sounds files. For example, one could use Tempi to store musical notes sequenced over time, to do rapid prototyping of motion, or any type of changes that are then easy to reproduce again.
+
+Tempi eases routing data, and provides tracks in which one can store the changes overt time in those streams of data. It also provides some game logic bricks such as finite states machines. Streams can be passed through filter nodes in order to smooth changes, detect thresholds, change their scale or script finite state machines according to what happens in the streams. For each state, one could play different tracks, or choose different filters to apply on the transmitted data. Furthermore, it is possible to extend Tempi through extensions. Some extensions already provide OSC and MIDI input and output. In short, Tempi provides basic building blocks for building interactive digital art works.
+
+
+History
+-------
+Tempi is inspired by the Toonloop application, developed since 2008 by the artist-developper Alexandre Quessy. Tempi is developed at the Society for Arts and Technology [SAT] as part of the Metalab 2011-2013 research projects. Toonloop is an in situ frame by frame animation editor, whose clips are played back as we add frames to them. It eases spontaneous creation. Tempi expands this idea to apply it to any type of data that can be produced by sensors.
+
+The first prototypes have been done as of August 2011. It now supports sending and receiving OSC messages. It provides a dataflow environment in which you can connect nodes in a graph.
+
+This library offers new possibilities for in situ data sampling. One can record trajectories, data from any kind of sensor, as well as image and sound files. These tracks could potentially be integrated to timeline-based graphical editors.
+
+
+License
+-------
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License and GNU General Public License as published by the Free Software Foundation; either version 3 of the Licenses, or (at your option) any later version. The library itself is licensed under LGPL while the commandline application is licensed under GPL.
+
+
+Authors
+-------
+* Alexandre Quessy <alexandre@quessy.net>
+* Michal Seta <mis@artengine.ca>
+
+
+Project URL
+-----------
+http://tempi.toonloop.com/
+
+The source code is currently managed at http://github.com/aalex/tempi
+
+
+Sponsors
+--------
+This project is made possible thanks to the Society for Arts and Technologies. [SAT] http://www.sat.qc.ca/
+Thanks to the Ministère du Développement économique, de l'Innovation et de l'Exportation du Québec (MDEIE).
+
+
+Installation
+------------
+Here is how to build and install it on Debian GNU/Linux or Ubuntu::
+
+  $ sudo apt-get install help2man gettext automake bison build-essential flex libtool 
+  $ sudo apt-get install libxml2-dev libclutter-1.0-dev libglib-2.0-dev libboost-all-dev libstk0-dev liblo0-dev
+  $ ./autogen.sh
+  $ ./configure
+  $ make
+  $ sudo make install
+

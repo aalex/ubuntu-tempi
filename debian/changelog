@@ -1,0 +1,5 @@
+tempi (0.1.4-1~lucid~ppa1) lucid; urgency=low
+
+  * Initial packaging.
+
+ -- Alexandre Quessy <alexandre@quessy.net>  Wed, 14 Dec 2011 12:12:59 -0500

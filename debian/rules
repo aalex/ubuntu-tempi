@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+# rules
+#
+# Robert Jordens <rjo@gmx.de>
+#
+# This software may be used and distributed according to the terms
+# of the GNU General Public License, incorporated herein by reference.
+#
+# $Id$
+#
+
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+#DEB_SHLIBDEPS_INCLUDE := lib/.libs
+DEB_CONFIGURE_USER_FLAGS := --enable-static
+
+# after the directories are created but before dh_compress is run.
+common-binary-post-install-arch::
+	dh_buildinfo
+
