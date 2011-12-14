@@ -1,4 +1,3 @@
 debian/tmp/usr/bin/tempi-draw
 debian/tmp/usr/bin/midilooper
 debian/tmp/usr/bin/osc-forward
-debian/tmp/usr/share/man/man3/*

@@ -1,4 +1,3 @@
-debian/tmp/usr/share/man/man1/milhouse.1
-debian/tmp/usr/share/man/man1/dc-ctl.1
-debian/tmp/usr/share/man/man1/jack-info.1
-debian/tmp/usr/share/man/man1/firereset.1
+debian/tmp/usr/share/man/man1/tempi-draw.1
+debian/tmp/usr/share/man/man1/midilooper.1
+debian/tmp/usr/share/man/man1/osc-forward.1
